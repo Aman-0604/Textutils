@@ -39,7 +39,7 @@ export default function TextForm(props) {
                 {/* length is a property of a string not a method or a function hence no () */}
                 <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
                 {/* 0.008 minutes is the average time taken to read a word. */}
-                <p>It can be read in {0.008 * text.split(" ").length} minutes.</p>
+                <p>It can be read in {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes.</p>
             </div>
         </>
     );
